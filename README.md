@@ -6,11 +6,7 @@
   [![Alt Text](https://img.shields.io/badge/HuggingFace-Demo-yellow?logo=huggingface)](https://huggingface.co/spaces/ekwek/Soprano-TTS)
 </div>
 
-
-<!-- Embedded demo video (placeholder) -->
-
-<p align="center">
-</p>
+https://github.com/user-attachments/assets/525cf529-e79e-4368-809f-6be620852826
 
 ---
 

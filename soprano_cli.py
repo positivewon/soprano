@@ -31,10 +31,7 @@ def main():
     
     # Generate speech
     print(f"Generating speech for: '{args.text}'")
-    audio = tts.generate(args.text)
-    
-    # Save output
-    tts.save_audio(audio, args.output)
+    tts.infer(args.text, out_path=args.output)
     print(f"Audio saved to: {args.output}")
 
 if __name__ == "__main__":

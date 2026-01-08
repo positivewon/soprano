@@ -149,10 +149,10 @@ I’m a second-year undergrad who’s just started working on TTS models, so I w
 * [x] Add model and inference code
 * [x] Seamless streaming
 * [x] Batched inference
-* [ ] Command-line interface (CLI)
+* [x] Command-line interface (CLI)
+* [x] CPU support
 * [ ] Server / API inference
 * [ ] Additional LLM backends
-* [ ] CPU support
 * [ ] Voice cloning
 * [ ] Multilingual support
 

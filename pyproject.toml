@@ -17,6 +17,7 @@ classifiers = [
 ]
 dependencies = [
   "fastapi",
+  "gradio",
   "huggingface_hub",
   "lmdeploy",
   "numpy",

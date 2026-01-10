@@ -33,34 +33,20 @@ class SopranoTTS:
             decoder_batch_size=1):
         RECOGNIZED_DEVICES = ['cuda', 'cpu', 'mps']
         RECOGNIZED_BACKENDS = ['auto', 'lmdeploy', 'transformers']
-        
-        # Check for environment variable override
-        env_backend = os.environ.get('SOPRANO_BACKEND')
-        if env_backend:
-            if env_backend in RECOGNIZED_BACKENDS:
-                backend = env_backend
-                print(f"Using backend from SOPRANO_BACKEND: {backend}")
-            else:
-                print(f"Warning: Invalid SOPRANO_BACKEND='{env_backend}'. Must be one of {RECOGNIZED_BACKENDS}. Ignoring.")
-        
         assert device in RECOGNIZED_DEVICES, f"unrecognized device {device}, device must be in {RECOGNIZED_DEVICES}"
         
         # Auto-select backend based on device and availability
         if backend == 'auto':
             if device == 'cpu':
                 backend = 'transformers'
-                print(f"Using backend: {backend} (CPU always uses transformers)")
             else:
                 try:
                     import lmdeploy
                     backend = 'lmdeploy'
-                    print(f"Using backend: {backend} (lmdeploy available)")
                 except ImportError:
                     backend = 'transformers'
-                    print(f"Using backend: {backend} (lmdeploy not installed, falling back to transformers)")
-        else:
-            print(f"Using backend: {backend} (explicitly set)")
         assert backend in RECOGNIZED_BACKENDS, f"unrecognized backend {backend}, backend must be in {RECOGNIZED_BACKENDS}"
+        print(f"Using backend {backend}.")
 
         self.device = device
         if backend == 'lmdeploy':

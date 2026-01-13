@@ -17,8 +17,8 @@
 ## Overview
 
 **Soprano** is an ultra‑lightweight, on-device text‑to‑speech (TTS) model designed for expressive, high‑fidelity speech synthesis at unprecedented speed. Soprano was designed with the following features:
-- Up to **2000x** real-time generation on GPU and **20x** real-time on CPU
-- **Lossless streaming** with **<15 ms** latency on GPU, **<250 ms** on CPU
+- Up to **20x** real-time generation on CPU and **2000x** real-time on GPU
+- **Lossless streaming** with **<250 ms** latency on CPU, **<15 ms** on GPU
 - **<1 GB** memory usage with a compact 80M parameter architecture
 - **Infinite generation length** with automatic text splitting
 - Highly expressive, crystal clear audio generation at **32kHz**

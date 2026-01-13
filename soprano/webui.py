@@ -107,18 +107,17 @@ def generate_speech(
 # Create Gradio interface
 with gr.Blocks(title="Soprano TTS") as demo:
     gr.Markdown(
-        f"""
-# 🎵 Soprano TTS
+        f"""# 🗣️ Soprano TTS
+
+<div align="center">
+<img width="300" height="300" alt="soprano-github" src="https://github.com/user-attachments/assets/4d612eac-23b8-44e6-8c59-d7ac14ebafd1" />
+</div>
 
 **Device:** {device.upper()} | **Backend:** {backend}
 
-Soprano is an ultra-lightweight, open-source text-to-speech (TTS) model designed for real-time,
-high-fidelity speech synthesis at unprecedented speed. Soprano can achieve **<15 ms streaming latency**
-and up to **2000x real-time generation**, all while being easy to deploy at **<1 GB VRAM usage**.
-
-**GitHub:** https://github.com/ekwek1/soprano  
+**Model Weights:** https://huggingface.co/ekwek/Soprano-80M  
 **Model Demo:** https://huggingface.co/spaces/ekwek/Soprano-TTS  
-**Model Weights:** https://huggingface.co/ekwek/Soprano-80M
+**GitHub:** https://github.com/ekwek1/soprano  
 """
     )
     with gr.Row():
@@ -181,9 +180,9 @@ and up to **2000x real-time generation**, all while being easy to deploy at **<1
     gr.Examples(
         examples=[
             ["Soprano is an extremely lightweight text to speech model.", 0.3, 0.95, 1.2],
-            ["Hello! Welcome to Soprano text to speech.", 0.3, 0.95, 1.2],
-            ["The quick brown fox jumps over the lazy dog.", 0.3, 0.95, 1.2],
             ["Artificial intelligence is transforming the world.", 0.5, 0.90, 1.2],
+            ["I'm so excited, I can't even wait!", 0.3, 0.95, 1.2],
+            ["Why don't you go ahead and try it?", 0.3, 0.95, 1.2],
         ],
         inputs=[text_input, temperature, top_p, repetition_penalty],
         label="Example Prompts",
